@@ -29,6 +29,13 @@ modifiedDataCountryScores.sort((a, b) => {
   if (a.name[0] > b.name[0]) return 1;
   else return 0;
 });
+
+const personalScores = [{ name: "Personal Scores", scores: [] }];
+modifiedDataCountryScores.map((item) =>
+  personalScores[0].scores.push(...item.scores)
+);
+console.log(personalScores);
+
 let controllerCountries = true;
 let controllerScores = true;
 
@@ -36,6 +43,18 @@ function App() {
   const [dataCountryScore, dataCountryScoreHandler] = React.useState(
     modifiedDataCountryScores
   );
+
+  const [countryPersonalScores, countryPersonalScoresHandler] = React.useState(
+    false
+  );
+
+  const personalCountriesHandler = () => {
+    if (countryPersonalScores) {
+      countryPersonalScoresHandler(false);
+    } else {
+      countryPersonalScoresHandler(true);
+    }
+  };
 
   const sortResultsHandler = () => {
     if (!controllerScores) {
@@ -87,6 +106,13 @@ function App() {
     }
   };
 
+  let scores = null;
+  if (countryPersonalScores) {
+    scores = <TBodyElement dataScoresPlayers={personalScores} />;
+  } else {
+    scores = <TBodyElement dataScoresPlayers={modifiedDataCountryScores} />;
+  }
+
   return (
     <div className="App">
       <header className="">
@@ -95,9 +121,10 @@ function App() {
       <div className={`blueBorder`}>
         <button onClick={sortCountriesHandler}>Sort By Countries</button>
         <button onClick={sortResultsHandler}>Sort By Scores</button>
+        <button onClick={personalCountriesHandler}>Countries/Personal</button>
         <h2>High Scores per Country</h2>
 
-        <TBodyElement dataScoresPlayers={dataCountryScore} />
+        {scores}
 
         {/* </main> */}
       </div>
