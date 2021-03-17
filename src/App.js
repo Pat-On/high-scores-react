@@ -1,7 +1,13 @@
 import "./App.css";
 
+// import TableElement from "./Components/Table/TableElement";
+import TheadElement from "./Components/Table/TheadElement/TheadElement";
+import TBodyElement from "./Components/Table/TBodyElement/TBodyElement";
+
 //data import
 import allCountryScores from "./data/scores";
+
+const dataAllCountryScores = [...allCountryScores];
 
 function App() {
   return (
@@ -10,17 +16,17 @@ function App() {
         <h1>High Score Tables (React)</h1>
       </header>
       {/* <main> */}
-      <table>
-        <thead>
-          <tr>
-            <th colspan="2">High Scores per Country</th>
-          </tr>
-        </thead>
 
+      <table>
+        <TheadElement columnSpan={2} title={"High Scores per Country"} />
+
+        <TBodyElement dataScoresPlayers={dataAllCountryScores} />
         <tbody>
+          {/* 
           <tr>
             <th colspan="2">Colombia</th>
-          </tr>
+          </tr> */}
+
           <tr>
             <td>Ali: </td>
             <td>1000</td>
