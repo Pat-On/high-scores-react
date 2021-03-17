@@ -7,24 +7,28 @@ const TBodyElement = (props) => {
     <tbody>
       {props.dataScoresPlayers.map((item, index) => {
         return (
-          <table>
-            <TrElement
-              key={index + Math.random()}
-              titleHeader={true}
-              columnSpan={2}
-              countryName={item.name}
-            />
-            {console.log(item.scores)}
-            {item.scores.map((item, index) => {
-              return (
-                <TrElement
-                  className={`blackBorder`}
-                  key={index + Math.random()}
-                  titleHeader={false}
-                  personObject={item}
-                />
-              );
-            })}
+          <table className="green">
+            <table>
+              <TrElement
+                key={index + Math.random()}
+                titleHeader={true}
+                columnSpan={2}
+                countryName={item.name}
+              />
+              {console.log(item.scores)}
+              <table className="black">
+                {item.scores.map((item, index) => {
+                  return (
+                    <TrElement
+                      className={`blackBorder`}
+                      key={index + Math.random()}
+                      titleHeader={false}
+                      personObject={item}
+                    />
+                  );
+                })}
+              </table>
+            </table>
           </table>
         );
       })}

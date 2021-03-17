@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
 .blueBorder {
 border: 5px solid #B8B8FF;
 width: 60%;
@@ -15,10 +21,13 @@ h1 {
 th {
 color: #87CEFA;
 }
+tr {
+  width: 100%;
+}
 
 td {
   width: 50%;
-  padding-right: 20px;
+  padding: 5px 10px 5px 0;
 }
 .App {
   text-align: center;
@@ -26,10 +35,21 @@ td {
 table {
     margin-left: auto;
   margin-right: auto;
-  border: 15px solid #ADFF2F;
-  width: 90%;
+ /* border: 15px solid #ADFF2F; */
+  width: 100%;
   margin-top: 2%;
    text-align:right;
+}
+table.green {
+ border: 15px solid #ADFF2F;
+ padding-bottom: 10px;;
+ width: 100%;
+}
+
+table.black {
+  border: 1px solid black;
+  width: 100%;
+  padding-bottom: 10px;
 }
 
 tr.blackBorder {
@@ -41,43 +61,14 @@ color: #000000;
 .headerTabelRow {
   text-align:center;
   color: yellow;
+  width: 100%;
 }
 
 tr.blackBorder td:nth-child(2n) {
   color: red;
+  border-bottom: 2px solid black;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+tr.blackBorder td:nth-child(1n) {
+  
+  border-bottom: 2px solid black;
 }
