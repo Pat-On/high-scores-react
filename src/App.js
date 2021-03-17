@@ -1,25 +1,34 @@
 import classes from "./App.css";
-
-// import TableElement from "./Components/Table/TableElement";
-import TheadElement from "./Components/Table/TheadElement/TheadElement";
-import TBodyElement from "./Components/Table/TBodyElement/TBodyElement";
+import TBodyElement from "./Components/Table/ScoreTableCreator/ScoreTableCreator";
 
 //data import
 import allCountryScores from "./data/scores";
 
 //this is narrow copy so it has no sense basically, because deep nested object still going
 //to be referred to the same "memory place"
-const dataAllCountryScores = [...allCountryScores];
+// const dataAllCountryScores = [...allCountryScores];
 const modifiedDataCountryScores = [...allCountryScores];
+console.log(modifiedDataCountryScores);
+
 modifiedDataCountryScores.forEach((item) => {
   item.name = item.name;
   item.scores.forEach((itemNested) => {
     itemNested.n = itemNested.n.toUpperCase();
     itemNested.s = itemNested.s;
   });
+  //sorting the array
+  item.scores.sort((a, b) => {
+    if (a.s < b.s) return 1;
+    if (a.s > b.s) return -1;
+    else return 0;
+  });
 });
 
-console.log(modifiedDataCountryScores);
+modifiedDataCountryScores.sort((a, b) => {
+  if (a.name[0] < b.name[0]) return -1;
+  if (a.name[0] > b.name[0]) return 1;
+  else return 0;
+});
 
 function App() {
   return (
@@ -27,14 +36,13 @@ function App() {
       <header className="">
         <h1>High Score Tables (React)</h1>
       </header>
-      {/* <main> */}
+      <div className={`blueBorder`}>
+        <h2>High Scores per Country</h2>
 
-      <table className={`blueBorder`}>
-        <TheadElement columnSpan={2} title={"High Scores per Country"} />
+        <TBodyElement dataScoresPlayers={modifiedDataCountryScores} />
 
-        <TBodyElement dataScoresPlayers={dataAllCountryScores} />
-      </table>
-      {/* </main> */}
+        {/* </main> */}
+      </div>
     </div>
   );
 }
