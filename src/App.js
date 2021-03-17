@@ -19,31 +19,7 @@ function App() {
 
       <table>
         <TheadElement columnSpan={2} title={"High Scores per Country"} />
-
         <TBodyElement dataScoresPlayers={dataAllCountryScores} />
-        <tbody>
-          {/* 
-          <tr>
-            <th colspan="2">Colombia</th>
-          </tr> */}
-
-          <tr>
-            <td>Ali: </td>
-            <td>1000</td>
-          </tr>
-          <tr>
-            <td>Maria: </td>
-            <td>1000</td>
-          </tr>
-          <tr>
-            <td>Ali: </td>
-            <td>1000</td>
-          </tr>
-          <tr>
-            <td>Maria: </td>
-            <td>1000</td>
-          </tr>
-        </tbody>
       </table>
       {/* </main> */}
     </div>

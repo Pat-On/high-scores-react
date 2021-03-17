@@ -4,12 +4,12 @@ import Aux from "../../../hoc/auxilliary";
 
 const TBodyElement = (props) => {
   return (
-    <Aux>
+    <tbody>
       {props.dataScoresPlayers.map((item, index) => {
         return (
           <Aux>
             <TrElement
-              key={index}
+              key={index + Math.random()}
               titleHeader={true}
               columnSpan={2}
               countryName={item.name}
@@ -18,7 +18,7 @@ const TBodyElement = (props) => {
             {item.scores.map((item, index) => {
               return (
                 <TrElement
-                  key={index}
+                  key={index + Math.random()}
                   titleHeader={false}
                   personObject={item}
                 />
@@ -27,7 +27,7 @@ const TBodyElement = (props) => {
           </Aux>
         );
       })}
-    </Aux>
+    </tbody>
   );
 };
 
