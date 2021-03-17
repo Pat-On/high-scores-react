@@ -5,70 +5,53 @@
 }
 
 .blueBorder {
-border: 5px solid #B8B8FF;
-width: 60%;
- text-align:center;
+  border: 5px solid #B8B8FF;
+  width: 90%;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
   color: #87CEFA;
-}
-
-.mainTH {
-     text-align:center;
-}
-
-th {
-color: #87CEFA;
-}
-tr {
-  width: 100%;
+  margin-bottom: 10px ;
 }
 
 td {
   width: 50%;
+  margin-bottom: 25px;
   padding: 5px 10px 5px 0;
+  border-bottom:  1px solid black;
 }
 .App {
+  width: 90%;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 table {
-    margin-left: auto;
+  margin-left: auto;
   margin-right: auto;
- /* border: 15px solid #ADFF2F; */
-  width: 100%;
+  width: 98%;
   margin-top: 2%;
-   text-align:right;
-}
-table.green {
- border: 15px solid #ADFF2F;
- padding-bottom: 10px;;
- width: 100%;
-}
-
-table.black {
+  text-align:right;
   border: 1px solid black;
-  width: 100%;
   padding-bottom: 10px;
 }
+.green {
+  border: 10px solid #ADFF2F;
+  padding-bottom: 10px;;
+  width: 90%;
+  margin: 10px auto 10px auto;
 
-tr.blackBorder {
-border: 5px solid black;
-width: 10px;
-color: #000000;
 }
 
-.headerTabelRow {
-  text-align:center;
-  color: yellow;
-  width: 100%;
+tr {
+  padding-bottom: 10px;
 }
 
 tr.blackBorder td:nth-child(2n) {
   color: red;
-  border-bottom: 2px solid black;
-}
-tr.blackBorder td:nth-child(1n) {
   
-  border-bottom: 2px solid black;
 }
+
