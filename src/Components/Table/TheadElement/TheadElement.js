@@ -4,7 +4,11 @@ import ThElement from "../ThElement/ThElement";
 const TheadElement = (props) => {
   return (
     <thead>
-      <ThElement columnSpan={props.columnSpan} title={props.title} />
+      <ThElement
+        mainHeader={true}
+        columnSpan={props.columnSpan}
+        countryName={props.title}
+      />
     </thead>
   );
 };
