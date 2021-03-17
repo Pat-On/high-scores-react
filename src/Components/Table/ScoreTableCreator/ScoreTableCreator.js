@@ -1,6 +1,5 @@
 import React from "react";
 import TrElement from "../TrElement/TrElement";
-import Aux from "../../../hoc/auxilliary";
 
 const TBodyElement = (props) => {
   return (
