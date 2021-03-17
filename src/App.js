@@ -1,4 +1,4 @@
-import "./App.css";
+import classes from "./App.css";
 
 // import TableElement from "./Components/Table/TableElement";
 import TheadElement from "./Components/Table/TheadElement/TheadElement";
@@ -17,7 +17,7 @@ function App() {
       </header>
       {/* <main> */}
 
-      <table>
+      <table className={`blueBorder`}>
         <TheadElement columnSpan={2} title={"High Scores per Country"} />
         <TBodyElement dataScoresPlayers={dataAllCountryScores} />
       </table>

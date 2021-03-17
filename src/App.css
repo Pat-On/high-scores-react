@@ -1,10 +1,50 @@
+.blueBorder {
+border: 5px solid #B8B8FF;
+width: 60%;
+ text-align:center;
+}
 
+h1 {
+  color: #87CEFA;
+}
+
+.mainTH {
+     text-align:center;
+}
+
+th {
+color: #87CEFA;
+}
+
+td {
+  width: 50%;
+  padding-right: 20px;
+}
 .App {
   text-align: center;
 }
 table {
     margin-left: auto;
   margin-right: auto;
+  border: 15px solid #ADFF2F;
+  width: 90%;
+  margin-top: 2%;
+   text-align:right;
+}
+
+tr.blackBorder {
+border: 5px solid black;
+width: 10px;
+color: #000000;
+}
+
+.headerTabelRow {
+  text-align:center;
+  color: yellow;
+}
+
+tr.blackBorder td:nth-child(2n) {
+  color: red;
 }
 
 .App-logo {

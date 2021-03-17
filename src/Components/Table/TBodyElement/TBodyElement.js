@@ -7,7 +7,7 @@ const TBodyElement = (props) => {
     <tbody>
       {props.dataScoresPlayers.map((item, index) => {
         return (
-          <Aux>
+          <table>
             <TrElement
               key={index + Math.random()}
               titleHeader={true}
@@ -18,13 +18,14 @@ const TBodyElement = (props) => {
             {item.scores.map((item, index) => {
               return (
                 <TrElement
+                  className={`blackBorder`}
                   key={index + Math.random()}
                   titleHeader={false}
                   personObject={item}
                 />
               );
             })}
-          </Aux>
+          </table>
         );
       })}
     </tbody>
